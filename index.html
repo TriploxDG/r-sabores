@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name=" viewport" content="width=device-width, initial-scale=1">
+   <title>Restaurante Sabores Da Terra</title>
+
+    <style>
+
+    *{
+        padding-left: 0;
+        margin-top: 0;
+        font-family: sans-serif;
+
+    }
+
+    nav{
+        background: #fff;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 15px;
+    }
+
+    .section1{
+        height: 65vh;
+        width: 100%;
+        background: linear-gradient(rgb(0,0,0,0.5), rgb(0,51,102,0.7)), url('rsdt.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .button1{
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        color: #fff;
+        height: 30px;
+        margin-top: 200px;
+    }
+    .button2{
+        background: transparent;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        color: #4ac45a;
+        height: 30px;
+        margin-top: 100px;
+    }
+
+
+
+
+
+    .informacao{
+        color: black;
+        background-color: #fafafa;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content{
+        display: flex;
+        justify-content: center;
+        background: #fafafa;
+    }
+
+    .informacao-pratos-principais{
+        display: none;
+    }
+
+    .informacao-sobremesas{
+        display: none;
+    }
+
+    .informacao-bebidas{
+        display: none;
+    }
+    </style>
+
+
+
+</head>
+<body>
+
+
+<nav>
+    <div>
+        <a href="sobre.html"><p>Sobre</p></a>
+        <a href="pratos.html"><p>Pratos</p></a>
+    </div>
+</nav>
+
+
+<section class="section1">
+
+    <button class="button1">ver mais</button>
+
+</section>
+
+<section class="informacao">
+    <div>
+        <button class="button2" id="button2">pratos principais</button>
+        <button class="button2" id="button3">sobremesas</button>
+        <button class="button2" id="button4">bebidas</button>
+    </div>
+
+</section>
+
+<section class="content">
+    <div class="informacao-pratos-principais">
+        <img src="rsdt.jpg" style="width: 200px; height: 200px;">
+     </div>
+
+     <div class="informacao-sobremesas">
+        <img src="rsdt1.jpg" style="width: 200px; height: 200px;">
+     </div>
+
+     <div class="informacao-bebidas">
+        <img src="imagem.jpg" style="width: 200px; height: 200px;">
+     </div>
+</section>
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+
+    $("#button2").on('click', function() {
+        $(".informacao-pratos-principais").show(),
+       $(".informacao-sobremesas").hide();
+       $(".informacao-bebidas").hide();
+    })
+    $("#button3").on('click',function() {
+        $(".informacao-sobremesas").show(),
+        $(".informacao-pratos-principais").hide();
+        $(".informacao-bebidas").hide();
+    })
+    $("#button4").on('click',function() {
+        $(".informacao-bebidas").show(),
+        $(".informacao-sobremesas").hide();
+        $(".informacao-pratos-principais").hide();
+    })
+    
+</script>
+</html>
